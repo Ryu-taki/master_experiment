@@ -7,3 +7,33 @@ requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.10.3",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+# 特定のファイルパターンに対して特定のルールを無視
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/tests/*" = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
