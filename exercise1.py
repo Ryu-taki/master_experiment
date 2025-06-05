@@ -79,3 +79,5 @@ if __name__ == "__main__":
     print(f"Total dead: {total_dead}")
 
     plot_four_compartments(s_values, i_values, r_values, d_values)
+    
+    np.save("./output/exercise1/i_values_baseline.npy", np.array(i_values))
