@@ -8,6 +8,7 @@
   * `experiment1.py`
   * output
     * `output/exercise1/four_compartments.png`
+    * `output/exercise1/result.txt`
 
 ### Todo
 * Complete Exercise2
