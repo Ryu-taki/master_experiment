@@ -36,8 +36,8 @@ if __name__ == "__main__":
     b: float = 1.0
 
     s_values, i_values, r_values, d_values = simulation(R0, b, phi, i0)
-    total_infected: float = 1 - s_values[-1]
-    total_dead: float = d_values[-1]
+    total_infected: float = float(1 - s_values[-1])
+    total_dead: float = float(d_values[-1])
     print(f"Total infected: {total_infected}")
     print(f"Total dead: {total_dead}")
 
