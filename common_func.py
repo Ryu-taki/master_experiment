@@ -1,5 +1,6 @@
-import numpy as np
 import pickle
+
+import numpy as np
 
 dt: float = 0.01
 
@@ -69,7 +70,7 @@ def save_values_as_pickle(
         )
 
 
-def load_values_from_pickle(filepath: str) -> dict[str : np.ndarray]:
+def load_values_from_pickle(filepath: str) -> dict[str, np.ndarray]:
     with open(filepath, "rb") as f:
         value_dict = pickle.load(f)
     return value_dict

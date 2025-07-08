@@ -2,9 +2,8 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pickle
 
-from common_func import generate_t_values, simulation, save_values_as_pickle
+from common_func import generate_t_values, save_values_as_pickle, simulation
 
 
 def plot_four_compartments(
