@@ -1,6 +1,6 @@
 import numpy as np
+import pickle
 
-weeks: int = 50
 dt: float = 0.01
 
 
@@ -20,12 +20,12 @@ def d_dot(phi: float, i: float) -> float:
     return phi * i
 
 
-def generate_t_values() -> np.ndarray:
+def generate_t_values(weeks: int) -> np.ndarray:
     return np.arange(0, weeks + dt, dt)
 
 
 def simulation(
-    R0: float, b: float, phi: float, i0: float
+    R0: float, b: float, phi: float, i0: float, weeks: int
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     s_values: list[float] = [1 - i0]
     i_values: list[float] = [i0]
@@ -48,3 +48,28 @@ def simulation(
         np.array(r_values),
         np.array(d_values),
     )
+
+
+def save_values_as_pickle(
+    s_values: np.ndarray,
+    i_values: np.ndarray,
+    r_values: np.ndarray,
+    d_values: np.ndarray,
+    filepath: str,
+) -> None:
+    with open(filepath, "wb") as f:
+        pickle.dump(
+            {
+                "s_values": s_values,
+                "i_values": i_values,
+                "r_values": r_values,
+                "d_values": d_values,
+            },
+            f,
+        )
+
+
+def load_values_from_pickle(filepath: str) -> dict[str : np.ndarray]:
+    with open(filepath, "rb") as f:
+        value_dict = pickle.load(f)
+    return value_dict
