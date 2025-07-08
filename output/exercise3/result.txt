@@ -1,0 +1,4 @@
+Utility value (b=1.0): 2427.967063007555
+Utility value (b=0.8): 1862.6152606901264
+Utility value (b=0.6): -799.6357852968152
+Utility value (b=0.5): -1250.236238851433

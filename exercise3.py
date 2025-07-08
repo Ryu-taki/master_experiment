@@ -1,27 +1,7 @@
-import os
-import pickle
 
 import numpy as np
 
-from common_func import (
-    load_values_from_pickle,
-)
-
-
-def calc_utilitiy(
-    b: float,
-    phi: float,
-    s_values: np.ndarray,
-    i_values: np.ndarray,
-    cs: float,
-    ci: float,
-    cd: float,
-) -> float:
-    uv: float = -(ci + phi * cd) * float(i_values[-1])
-    ub: float = np.sum(-cs * (b - 1.0) ** 2 * s_values - (ci - phi * cd) * i_values)
-
-    return uv + ub
-
+from common_func import calc_utilitiy, load_values_from_pickle
 
 if __name__ == "__main__":
     # --- Define parameters ---
@@ -51,8 +31,3 @@ if __name__ == "__main__":
         )
         utility_values[b] = utility_value
         print(f"Utility value (b={b / 10}): {utility_value}")
-
-    # --- Save utility values as a pickle file ---
-    os.makedirs("./output/exercise3", exist_ok=True)
-    with open("./output/exercise3/utility_values.pkl", "wb") as f:
-        pickle.dump(utility_values, f)

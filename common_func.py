@@ -51,6 +51,21 @@ def simulation(
     )
 
 
+def calc_utilitiy(
+    b: float,
+    phi: float,
+    s_values: np.ndarray,
+    i_values: np.ndarray,
+    cs: float,
+    ci: float,
+    cd: float,
+) -> float:
+    uv: float = -(ci + phi * cd) * float(i_values[-1])
+    ub: float = np.sum(-cs * (b - 1.0) ** 2 * s_values - (ci - phi * cd) * i_values)
+
+    return uv + ub
+
+
 def save_values_as_pickle(
     s_values: np.ndarray,
     i_values: np.ndarray,
