@@ -1,4 +1,3 @@
-
 import numpy as np
 
 from common_func import calc_utilitiy, load_values_from_pickle
