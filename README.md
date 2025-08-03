@@ -1,5 +1,21 @@
 # Introduction to Data Analysis and Modeling of Biological and Social Systems
 
+## 250803
+### Done
+* Fixed the calculation of utility.
+  * `common_func.py`
+
+* Implemented Exercise 5
+  * `exercise5.py`
+  * Output:
+    * `output/exercise5/utility_values/phi=[0.002,0.029,0.094].pkl`
+    * `output/exercise5/plot_values.png`
+    * `output/exercise5/result.txt` (edited manually)
+
+### Todo
+* make report
+
+
 ## 250708
 ### Done
 * Changed the way of saving and loading simulation values.

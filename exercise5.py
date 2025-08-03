@@ -10,7 +10,6 @@ from common_func import (
 )
 
 if __name__ == "__main__":
-    os.makedirs("./output/exercise5/plot_utility/", exist_ok=True)
     os.makedirs("./output/exercise5/utility_values/", exist_ok=True)
 
     # --- Define parameters ---
@@ -84,6 +83,5 @@ if __name__ == "__main__":
     plt.title("Utility value change by b value")
     plt.legend()
 
-    plt.savefig("./output/exercise5/plot_utility/all.png")
-    plt.show()
+    plt.savefig("./output/exercise5/plot_utility.png")
     plt.close()
