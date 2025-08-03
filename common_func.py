@@ -64,7 +64,7 @@ def calc_utilitiy(
     integral_term: float = -cs * (b - 1.0) ** 2 * s_values - (ci + phi * cd) * i_values
     ub: float = np.sum(integral_term * dt) * uv
 
-    return ub
+    return float(ub)
 
 
 def save_values_as_pickle(

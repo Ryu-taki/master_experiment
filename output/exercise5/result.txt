@@ -1,0 +1,9 @@
+--- Population average (phi=0.029) ---
+Optimal b value: 0.656
+Optimal utility value: 7.835
+--- Population consists only of young people (phi=0.002) ---
+Optimal b value: 0.653
+Optimal utility value: 0.646
+--- Population consists only of old people (phi=0.094) ---
+Optimal b value: 0.657
+Optimal utility value: 52.398
